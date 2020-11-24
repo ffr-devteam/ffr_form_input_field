@@ -2,7 +2,7 @@
 
 Form Input Field Package created with flutter.
 
-The source code is **100% Dart and Flutter**, and all necessary files are located in the [/lib](https://github.com/ffr-devteam/ffr_custom_switch/tree/main/lib) folder
+The source code is **100% Dart and Flutter**, and all necessary files are located in the [/lib](https://github.com/ffr-devteam/ffr_form_input_field/tree/main/lib) folder
 
 ## Installation
 
