@@ -9,3 +9,7 @@
 ## 0.0.3 - 25.11.2020
 
 * added different size for web use
+
+## 0.0.4 - 25.11.2020
+
+* added possibility to add a focusNode

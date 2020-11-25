@@ -32,8 +32,8 @@ class _MyHomePageState extends State<MyHomePage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final _formKey = GlobalKey<FormState>();
   final _testKey = GlobalKey<FormFieldState<String>>();
+  final FocusNode _testNode = FocusNode();
   bool isError = false;
-
   String text = '';
 
   void _saveForm() {
@@ -48,6 +48,12 @@ class _MyHomePageState extends State<MyHomePage> {
             .showSnackBar(SnackBar(content: Text('A value must be entered')));
       }
     }
+  }
+
+  @override
+  void dispose() {
+    _testNode.dispose();
+    super.dispose();
   }
 
   @override
@@ -68,6 +74,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 30),
                     child: FFRFromInputField(
+                      autofocus: true,
+                      focusNode: _testNode,
+                      onFieldSubmitted: (term){
+                        _testNode.unfocus();
+                      },
                       hintText: 'I am a Text input field',
                       backgroundColor: Colors.lightGreen,
                       icon: Icon(Icons.check_box),

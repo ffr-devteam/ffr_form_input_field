@@ -15,6 +15,9 @@ class FFRFromInputField extends StatelessWidget {
     @required this.validate,
     @required this.textStyle,
     @required this.errorColor,
+    this.autofocus,
+    this.onFieldSubmitted,
+    this.focusNode,
   }) : super(key: key);
 
   final String hintText;
@@ -26,6 +29,9 @@ class FFRFromInputField extends StatelessWidget {
   final Function validate;
   final Key fieldKey;
   final bool isError;
+  final bool autofocus;
+  final Function onFieldSubmitted;
+  final FocusNode focusNode;
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +48,9 @@ class FFRFromInputField extends StatelessWidget {
         color: backgroundColor,
       ),
       child: TextFormField(
+        autofocus: autofocus,
+        onFieldSubmitted: onFieldSubmitted,
+        focusNode: focusNode,
         validator: validate,
         key: fieldKey,
         style: textStyle,
