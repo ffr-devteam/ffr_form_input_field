@@ -1,6 +1,6 @@
 name: ffr_form_input_field
 description: A custom form input field with rounded corners and a leading icon with customizing options by the ffr-devteam
-version: 0.0.2
+version: 0.0.3
 homepage: https://fair-rates.ch
 repository: https://github.com/ffr-devteam/ffr_form_input_field
 

@@ -1,6 +1,7 @@
 library ffr_form_input_field;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 class FFRFromInputField extends StatelessWidget {
   const FFRFromInputField({
@@ -29,7 +30,7 @@ class FFRFromInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 350,
+      width: kIsWeb ? 400 : 350,
       height: 50,
       padding: const EdgeInsets.only(left: 20, right: 20),
       decoration: BoxDecoration(
