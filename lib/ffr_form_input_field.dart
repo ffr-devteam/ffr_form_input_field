@@ -15,7 +15,7 @@ class FFRFromInputField extends StatelessWidget {
     @required this.validate,
     @required this.textStyle,
     @required this.errorColor,
-    this.autofocus,
+    this.autofocus = false,
     this.onFieldSubmitted,
     this.focusNode,
   }) : super(key: key);

@@ -13,3 +13,7 @@
 ## 0.0.4 - 25.11.2020
 
 * added possibility to add a focusNode
+
+## 0.0.5 - 25.11.2020
+
+* small bug fixes
