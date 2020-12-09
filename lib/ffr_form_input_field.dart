@@ -48,6 +48,7 @@ class FFRFromInputField extends StatelessWidget {
         color: backgroundColor,
       ),
       child: TextFormField(
+        keyboardType: textInputType,
         autofocus: autofocus,
         onFieldSubmitted: onFieldSubmitted,
         focusNode: focusNode,
