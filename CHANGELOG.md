@@ -17,3 +17,7 @@
 ## 0.0.5 - 25.11.2020
 
 * small bug fixes
+
+## 0.0.6 - 25.11.2020
+
+* added possibility to change textInputType

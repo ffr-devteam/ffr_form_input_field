@@ -74,12 +74,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       onFieldSubmitted: (term){
                         _testNode.unfocus();
                       },
-                      hintText: 'I am a Text input field',
+                      hintText: 'I am a number input field',
                       backgroundColor: Colors.lightGreen,
                       icon: Icon(Icons.check_box),
                       fieldKey: _testKey,
                       isError: isError,
-                      textInputType: TextInputType.text,
+                      textInputType: TextInputType.number,
                       validate: (String newValue) {
                         if (newValue.isEmpty) {
                           setState(() {
