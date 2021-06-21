@@ -29,3 +29,7 @@
 ## 0.0.8 - 21.06.2021
 
 * Migrated to null safety
+
+## 0.0.9 - 21.06.2021
+
+* small bug fixes

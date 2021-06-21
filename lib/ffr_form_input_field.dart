@@ -8,7 +8,7 @@ class FFRFromInputField extends StatelessWidget {
     Key? key,
     required this.hintText,
     required this.backgroundColor,
-    required this.icon,
+    this.icon,
     required this.fieldKey,
     required this.isError,
     required this.textInputType,
@@ -25,7 +25,7 @@ class FFRFromInputField extends StatelessWidget {
   final TextStyle textStyle;
   final Color backgroundColor;
   final Color errorColor;
-  final Icon icon;
+  final Icon? icon;
   final TextInputType textInputType;
   final Function validate;
   final Key fieldKey;
