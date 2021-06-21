@@ -3,6 +3,9 @@ library ffr_form_input_field;
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
+typedef OnFieldSubmitted = void Function(String string);
+typedef Validate = String ?Function(String? string);
+
 class FFRFromInputField extends StatelessWidget {
   const FFRFromInputField({
     Key? key,
@@ -27,11 +30,11 @@ class FFRFromInputField extends StatelessWidget {
   final Color errorColor;
   final Icon? icon;
   final TextInputType textInputType;
-  final Function validate;
+  final Validate validate;
   final Key fieldKey;
   final bool isError;
   final bool autofocus;
-  final Function? onFieldSubmitted;
+  final OnFieldSubmitted? onFieldSubmitted;
   final FocusNode? focusNode;
   final List<String>? autofillHints;
 
@@ -53,9 +56,9 @@ class FFRFromInputField extends StatelessWidget {
         autofillHints: autofillHints,
         keyboardType: textInputType,
         autofocus: autofocus,
-        onFieldSubmitted: onFieldSubmitted as void Function(String)?,
+        onFieldSubmitted: onFieldSubmitted,
         focusNode: focusNode,
-        validator: validate as String? Function(String?)?,
+        validator: validate,
         key: fieldKey,
         style: textStyle,
         decoration: InputDecoration(
