@@ -21,3 +21,11 @@
 ## 0.0.6 - 25.11.2020
 
 * added possibility to change textInputType
+
+## 0.0.7 - 09.06.2021
+
+* added autofillHint support
+
+## 0.0.8 - 21.06.2021
+
+* Migrated to null safety

@@ -5,16 +5,17 @@ import 'package:flutter/foundation.dart';
 
 class FFRFromInputField extends StatelessWidget {
   const FFRFromInputField({
-    Key key,
-    @required this.hintText,
-    @required this.backgroundColor,
-    @required this.icon,
-    @required this.fieldKey,
-    @required this.isError,
-    @required this.textInputType,
-    @required this.validate,
-    @required this.textStyle,
-    @required this.errorColor,
+    Key? key,
+    required this.hintText,
+    required this.backgroundColor,
+    required this.icon,
+    required this.fieldKey,
+    required this.isError,
+    required this.textInputType,
+    required this.validate,
+    required this.textStyle,
+    required this.errorColor,
+    this.autofillHints,
     this.autofocus = false,
     this.onFieldSubmitted,
     this.focusNode,
@@ -30,8 +31,9 @@ class FFRFromInputField extends StatelessWidget {
   final Key fieldKey;
   final bool isError;
   final bool autofocus;
-  final Function onFieldSubmitted;
-  final FocusNode focusNode;
+  final Function? onFieldSubmitted;
+  final FocusNode? focusNode;
+  final List<String>? autofillHints;
 
   @override
   Widget build(BuildContext context) {
@@ -48,11 +50,12 @@ class FFRFromInputField extends StatelessWidget {
         color: backgroundColor,
       ),
       child: TextFormField(
+        autofillHints: autofillHints,
         keyboardType: textInputType,
         autofocus: autofocus,
-        onFieldSubmitted: onFieldSubmitted,
+        onFieldSubmitted: onFieldSubmitted as void Function(String)?,
         focusNode: focusNode,
-        validator: validate,
+        validator: validate as String? Function(String?)?,
         key: fieldKey,
         style: textStyle,
         decoration: InputDecoration(
